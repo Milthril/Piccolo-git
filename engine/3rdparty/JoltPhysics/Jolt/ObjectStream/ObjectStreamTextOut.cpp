@@ -179,7 +179,8 @@ void ObjectStreamTextOut::WriteChar(char inChar)
 
 void ObjectStreamTextOut::WriteWord(const string_view &inWord)
 {
-	mStream << inWord;
+	std::string s(inWord);
+	mStream << s;
 }
 
 JPH_NAMESPACE_END
